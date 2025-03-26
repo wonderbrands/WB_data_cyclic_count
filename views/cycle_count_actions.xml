@@ -1,35 +1,35 @@
 <odoo>
     <data>
-        <record id="action_client_wb_cycle_count_scan" model="ir.actions.client">
+        <record id="action_client_WB_data_cyclic_count_scan" model="ir.actions.client">
             <field name="name">Conteo</field>
-            <field name="tag">wb_cycle_count.wb_cycle_count_scan</field>
+            <field name="tag">WB_data_cyclic_count.WB_data_cyclic_count_scan</field>
         </record>
 
         <record id="action_cycle_log_tree" model="ir.actions.act_window">
             <field name="name">Log de conteo</field>
-            <field name="res_model">wb_cycle_count.log</field>
+            <field name="res_model">WB_data_cyclic_count.log</field>
             <field name="view_mode">list,form</field>
-            <field name="view_id" ref="wb_cycle_count_log_tree"/>
+            <field name="view_id" ref="WB_data_cyclic_count_log_tree"/>
         </record>
 
         <record id="action_count_session_tree" model="ir.actions.act_window">
             <field name="name">Sesión</field>
-            <field name="res_model">wb_cycle_count.count_session</field>
+            <field name="res_model">WB_data_cyclic_count.count_session</field>
             <field name="view_mode">list,form</field>
-            <field name="view_id" ref="wb_cycle_count_session_tree"/>
+            <field name="view_id" ref="WB_data_cyclic_count_session_tree"/>
         </record>
 
         <record id="action_report_waves_template" model="ir.actions.report">
             <field name="name">Waves Report</field>
-            <field name="model">wb_cycle_count.count_session</field>
+            <field name="model">WB_data_cyclic_count.count_session</field>
             <field name="report_type">qweb-pdf</field>
-            <field name="report_name">wb_cycle_count.waves_report_template</field>
-            <field name="report_file">wb_cycle_count.waves_report_template</field>
+            <field name="report_name">WB_data_cyclic_count.waves_report_template</field>
+            <field name="report_file">WB_data_cyclic_count.waves_report_template</field>
         </record>
 
         <record id="server_action_print_waves" model="ir.actions.server">
             <field name="name">Print Waves</field>
-            <field name="model_id" ref="model_wb_cycle_count_count_session"/>
+            <field name="model_id" ref="model_WB_data_cyclic_count_count_session"/>
             <field name="state">code</field>
             <field name="code">
                 action = model.print_barcode()  

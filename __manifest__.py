@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "wb_cycle_count",
+    'name': "WB_data_cyclic_count",
 
     'summary': "Is able to count the amount of stock in the wharehouse", 
 
@@ -35,13 +35,13 @@
 
     'assets': {
         'web.assets_backend': [
-            '/wb_cycle_count/static/src/js/app/objs.js',
-            '/wb_cycle_count/static/src/js/CycleCount.js',
-            '/wb_cycle_count/static/src/css/CycleCount.scss',
+            '/WB_data_cyclic_count/static/src/js/app/objs.js',
+            '/WB_data_cyclic_count/static/src/js/CycleCount.js',
+            '/WB_data_cyclic_count/static/src/css/CycleCount.scss',
         ],
 
         'web.assets_qweb': [
-            '/wb_cycle_count/static/src/xml/CycleCount.xml',
+            '/WB_data_cyclic_count/static/src/xml/CycleCount.xml',
         ],
     }
 

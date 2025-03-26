@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 class CheckZone(http.Controller):
 
     def find_session(self):
-        records = request.env["wb_cycle_count.count_session"].sudo().search(
+        records = request.env["WB_data_cyclic_count.count_session"].sudo().search(
             [
                 ("name", "=", request.jsonrequest["session"].strip()),
             ]
@@ -116,7 +116,7 @@ class CheckZone(http.Controller):
         _logger.info(request.jsonrequest["state"])
         _logger.info("================================")
 
-        log = request.env["wb_cycle_count.log"].sudo().create({
+        log = request.env["WB_data_cyclic_count.log"].sudo().create({
             "zone": request.jsonrequest["zone"],
             "product": request.jsonrequest["product"],
             "qty": False if not request.jsonrequest["qty"] else request.jsonrequest["qty"],

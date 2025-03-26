@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 
 
 class CountSession(models.Model):
-    _name = "wb_cycle_count.count_session"
+    _name = "WB_data_cyclic_count.count_session"
     _description = "Count Session"
 
     name = fields.Char(
@@ -18,7 +18,7 @@ class CountSession(models.Model):
         readonly=True,
     )
     counts = fields.One2many(
-        "wb_cycle_count.log",
+        "WB_data_cyclic_count.log",
         "session"
     )
     barcode_url = fields.Char("Barcode URL", compute="_compute_barcode_url")
@@ -29,10 +29,10 @@ class CountSession(models.Model):
             record.barcode_url = f"{self.env['ir.config_parameter'].get_param('web.base.url')}/report/barcode/?type=Code128&value={record.name}&width=900&height=400&humanreadable=1&quiet=0" if record.name else ""
 
     def print_barcode(self):
-        report = self.env['ir.actions.report']._get_report_from_name('wb_cycle_count.waves_report_template')
-        paper_format = self.env.ref('wb_cycle_count.paperformat_landscape_letter')
+        report = self.env['ir.actions.report']._get_report_from_name('WB_data_cyclic_count.waves_report_template')
+        paper_format = self.env.ref('WB_data_cyclic_count.paperformat_landscape_letter')
         report.write({'paperformat_id': paper_format.id})
-        sessions =self.env["wb_cycle_count.count_session"].search([])
+        sessions =self.env["WB_data_cyclic_count.count_session"].search([])
         pdf_content, _ = report._render_qweb_pdf(
             data={'records': sessions}
         )
@@ -56,7 +56,7 @@ class CountSession(models.Model):
         }
 
 class CycleCountLog(models.Model):
-    _name = "wb_cycle_count.log"
+    _name = "WB_data_cyclic_count.log"
     _description = "Cycle Count Log"
 
     scanned = fields.Char(string="Scanned string",readonly=True)
@@ -78,7 +78,7 @@ class CycleCountLog(models.Model):
         readonly=True
     )
     session = fields.Many2one(
-        "wb_cycle_count.count_session", 
+        "WB_data_cyclic_count.count_session", 
         string="Session",
         default=False,
         readonly=True

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <templates xml:space="preserve">
-    <t t-name="wb_cycle_count.CycleCountTemplate" owl="1">
+    <t t-name="WB_data_cyclic_count.CycleCountTemplate" owl="1">
         <div class="app-container" t-on-click="focus_active">
             <div class="instructions">
                 <div id="root">

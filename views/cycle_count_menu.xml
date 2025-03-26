@@ -1,22 +1,22 @@
 <odoo>
     <data>
-        <menuitem id="menu_wb_cycle_count_root" name="Conteo cíclico" sequence="1000"/>
+        <menuitem id="menu_WB_data_cyclic_count_root" name="Conteo cíclico" sequence="1000"/>
 
-        <menuitem id="menu_wb_cycle_count_scan" 
+        <menuitem id="menu_WB_data_cyclic_count_scan" 
                 name="Conteo" 
-                parent="menu_wb_cycle_count_root" 
-                action="action_client_wb_cycle_count_scan" 
+                parent="menu_WB_data_cyclic_count_root" 
+                action="action_client_WB_data_cyclic_count_scan" 
                 sequence="2000"/>
 
         <menuitem id="menu_cycle_scan_tree" 
                 name="Log de conteo" 
-                parent="menu_wb_cycle_count_root" 
+                parent="menu_WB_data_cyclic_count_root" 
                 action="action_cycle_log_tree" 
                 sequence="3000"/>
 
         <menuitem id="menu_count_session" 
                 name="Waves" 
-                parent="menu_wb_cycle_count_root" 
+                parent="menu_WB_data_cyclic_count_root" 
                 sequence="4000"/>
 
         <menuitem

@@ -415,7 +415,7 @@ class CycleCount extends Component {
     }
 }
 CycleCount.template =
-    "wb_cycle_count.CycleCountTemplate"
+    "WB_data_cyclic_count.CycleCountTemplate"
 core.action_registry.add(
-    "wb_cycle_count.wb_cycle_count_scan",
+    "WB_data_cyclic_count.WB_data_cyclic_count_scan",
     CycleCount);
