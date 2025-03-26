@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="wb_cycle_count_log_tree" model="ir.ui.view">
-        <field name="name">wb_cycle_count.log.tree</field>
+        <field name="name">wb_cycle_count.log.list</field>
         <field name="model">wb_cycle_count.log</field>
         <field name="arch" type="xml">
-            <tree decoration-info="status == 'success'" decoration-muted="status in ('no_stock_location', 'product_not_exist', 'product_already_counted')" editable="bottom" edit="1" >
+            <list decoration-info="status == 'success'" decoration-muted="status in ('no_stock_location', 'product_not_exist', 'product_already_counted')" editable="bottom" edit="1" >
                 <field name="scanned" />
                 <field name="scanned_by" />
                 <field name="scanned_at" />
@@ -14,7 +14,7 @@
                 <field name="status" />
                 <field name="session"/>
                 <field name="is_an_error"/>
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -48,12 +48,12 @@
 
     
     <record id="wb_cycle_count_session_tree" model="ir.ui.view">
-        <field name="name">wb_cycle_count.session.tree</field>
+        <field name="name">wb_cycle_count.session.list</field>
         <field name="model">wb_cycle_count.count_session</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" string="ID" />
-            </tree>
+            </list>
         </field>
     </record>
 

@@ -14,7 +14,7 @@
     'website': "https://www.wonderbrands.co",
     'license': 'LGPL-3',
     'category': 'Inventory',
-    'version': '15.0',
+    'version': '18.0',
     
     'depends': [
         'base', 
